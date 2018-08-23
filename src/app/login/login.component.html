@@ -1,0 +1,30 @@
+<div id="login">
+  <div class="login-wrapper">
+    <div class="login-container">
+      <div class="login-logo">
+        <img src="/assets/images/logo.png" alt="">
+      </div>
+      <h3 class="login-header">Login</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+        <div class="input-field">
+          <label class="login-label" for="email">Email</label>
+          <input type="text" formControlName="email">
+        </div>
+        <div *ngIf="loginForm.get('email').errors" class="error-explanation">
+          <p *ngIf="loginForm.get('email').errors.exists" class="error">Email does not exists</p>
+        </div>
+        <div class="input-field">
+          <label class="login-label" for="password">Password</label>
+          <input type="password" formControlName="password">
+        </div>
+        <div *ngIf="loginForm.get('password').errors" class="error-explanation">
+          <p *ngIf="loginForm.get('password').errors.minlength" class="error">Password need to be atleast 4 characters</p>
+          <p *ngIf="loginForm.get('password').errors.incorrect" class="error">Password does not match</p>
+        </div>
+        <div class="submit-btn">
+          <button [disabled]="loginForm.touched && loginForm.invalid" class="login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

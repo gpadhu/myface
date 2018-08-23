@@ -1,0 +1,88 @@
+#login {
+    height: calc(100vh - 125px);
+    background: url('/assets/images/baby-animal.jpg') center;
+}
+
+.login-wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.login-container {
+    width: 400px;
+    height: 340px;
+    background: rgba(255, 255, 255, 0.7);
+    border: #fff solid 5px;
+    border-radius: 5px;
+}
+
+.login-logo {
+    background-color: rgb(47, 73, 110);
+    text-align: center;
+}
+
+.login-logo img {
+    text-align: center;
+    width: 150px;
+}
+
+.login-header {
+    text-transform: uppercase;
+    text-align: center;
+    color: #2988bc;
+}
+
+.login-label {
+    color: #565f6c;
+    line-height: 38px;
+}
+
+.submit-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+.login-btn {
+    background: #2988bc;
+    width: 25%;
+    color: #fff;
+    height: 3em;
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.input-field {
+    padding:  5px;
+    clear: both;
+    height: 40px;
+}
+
+.input-field input {
+    height: 25px;
+    color: #47535f;
+    float: right;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.input-field input.ng-touched.ng-invalid {
+    border: #ed8c72 solid 2px;
+    box-shadow: inset 1px 1px 1px #ed8c72;
+}
+
+button.login-btn[disabled] {
+    cursor: not-allowed;
+    background: #7e8b92;
+}
+
+p.error {
+    margin: -10px 50px 0 92px;
+    font-size: .75em;
+    color: #904c3a;
+}
+

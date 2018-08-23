@@ -1,0 +1,88 @@
+#settings {
+    height: calc(100vh - 125px);
+    background: #f4eade;
+}
+
+.settings-header {
+    height: 50px;
+    padding: 20px;
+}
+
+img.settings-icon {
+    height: 45px;
+    position: absolute;
+}
+
+p.settings-heading {
+    display: inline-block;
+    line-height: 45px;
+    margin:  0 50px;
+    color: #2988bc;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+form {
+    border: 5px solid #fff;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.input-field {
+    color: #565f6c;
+    clear: both;
+    margin: 20px 0 0 10px;
+    position: relative;
+}
+
+.input-field input {
+    position: absolute;
+    width: 60%;
+    left: 150px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+label.setting-label {
+    line-height: 2em;
+}
+
+.submit-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+button.settings-btn {
+    background: #2988bc;
+    width: 25%;
+    color: #fff;
+    height: 3em;
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+button.settings-btn[disabled] {
+    cursor: not-allowed;
+    background: #7e8b92;
+}
+
+div.error-explanation {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 80px;
+}
+
+p.error {
+    margin: -10px 50px 0 92px;
+    font-size: .75em;
+    color: #904c3a;
+}
+
+.input-field input.ng-touched.ng-invalid {
+    border: #ed8c72 solid 2px;
+    box-shadow: inset 1px 1px 1px #ed8c72;
+}
+
+
+

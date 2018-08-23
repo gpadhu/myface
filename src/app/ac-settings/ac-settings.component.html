@@ -1,0 +1,41 @@
+<div id="settings">
+  <div class="settings-container">
+    <div class="settings-header">
+      <img class="settings-icon" src="/assets/images/settings.png" alt="">
+      <p class="settings-heading">Account Settings</p>
+    </div>
+    <div class="settings-form">
+      <form [formGroup]="userForm" (ngSubmit)="updateUserForm()">
+        <div class="input-field">
+          <label class="setting-label" for="firstname">First Name</label>
+          <input type="text" formControlName="firstname">
+        </div>
+        <div class="input-field">
+          <label class="setting-label" for="lastname">Last Name</label>
+          <input type="text" formControlName="lastname">
+        </div>
+        <div class="input-field">
+          <label class="setting-label" for="email">Email</label>
+          <input type="text" formControlName="email">
+        </div>
+        <div *ngIf="userForm.get('email').errors" class="error-explanation">
+          <p *ngIf="userForm.get('email').errors.email" class="error">Invalid Email format</p>
+        </div>
+        <div class="input-field">
+          <label class="setting-label" for="password">Password</label>
+          <input type="password" formControlName="password">
+        </div>
+        <div *ngIf="userForm.get('password').errors" class="error-explanation">
+          <p *ngIf="userForm.get('password').errors.minlength" class="error">Password need to be atleast 4 characters</p>
+        </div>
+        <div class="input-field">
+          <label class="setting-label" for="birthdate">Date of Birth</label>
+          <input type="date" min="1900-1-1" max="{{todayDate()}}" formControlName="birthdate">
+        </div>
+        <div class="submit-btn">
+          <button [disabled]="userForm.touched && userForm.invalid" class="settings-btn">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="header">
+  <div routerLink="/" class="logo">
+    <img src="assets/images/logo.png" alt="">
+  </div>  
+  <div class="logout">
+    <button *ngIf="userLoggedIn" (click)="logOut()" class="logout-btn">Logout</button>
+    <button *ngIf="!userLoggedIn"[routerLink]="'/login'" class="logout-btn">Login</button>
+  </div>
+</div>
+
+<myface-notification></myface-notification>   

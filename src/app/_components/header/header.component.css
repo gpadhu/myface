@@ -1,0 +1,30 @@
+#header {
+    background-color: #2f496e;
+    max-height: 75px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    height: 75px;
+    cursor: pointer;
+}
+
+.logout {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+button.logout-btn {
+    border: 2px solid #fff;
+    background: #304a6e;
+    color: #fff;
+    font-weight: bolder;
+    padding:  10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
