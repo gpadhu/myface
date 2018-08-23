@@ -12,7 +12,7 @@ import { AccountService } from '../_services/account.service';
 
 export class LoginComponent implements OnDestroy {
   public loginForm: FormGroup;
-  private acSubscription: Subscription;
+  private acSubscription = new Subscription();
 
   constructor(private formBuilder: FormBuilder,
               private accountService: AccountService,
